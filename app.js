@@ -130,7 +130,6 @@ app.post("/lookup", function(request, response){
   request.on("data", function(postBody){
     var query = queryString.parse(postBody.toString());
     var email = query["lookup[email]"];
-
     //check to see if email is in the database
     var params = {
       TableName: cache,
@@ -143,7 +142,7 @@ app.post("/lookup", function(request, response){
         response.end();
       } else {
         // success
-        if(data.Item && data.Item.email === email){
+        if(data.Item && data.Item.lookup_data && data.Item.email === email){
           console.log("Using the cache!");
           response.render("lookup_results", { data: data.Item.lookup_data, email: email });
           response.end();
@@ -151,6 +150,9 @@ app.post("/lookup", function(request, response){
             // no data came back, get data, use that data in templatevar 
             fullcontact = new FullContact(keys.fullContactApiKey);
             fullcontact.person.email(email, function (err, fcData) {
+              if(err) {
+                response.redirect("/lookup");
+              } else {
               var putParams = {
                 TableName: cache,
                 Item: {
@@ -169,6 +171,7 @@ app.post("/lookup", function(request, response){
                 response.end();
                 }
               });
+            }
           });
         }
       }
