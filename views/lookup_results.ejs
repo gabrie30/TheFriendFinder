@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <% if(data.likelihood) { %>
+      <% var percentage = data.likelihood; %>
+      <h1>Results: <%= percentage*100 %>% Estimated Accuracy </h1>
+    <% } %>
+
+    <% if(data.contactInfo){ %>
+      <% if(data.contactInfo.fullName){ %>
+        <h3 class="contact_info">Name: <%= data.contactInfo.fullName %></h3>
+      <% } %>
+    <% } %>
+
+    <h3 class="email">Email: <%= email %></h3>
+
+    <% if(data.demographics){ %>
+      <% if (data.demographics.location) { %>
+        <h3 class="location">Location: <%= data.demographics.locationGeneral %></h3>
+      <% } %>
+
+      <% if(data.demographics.age){ %>
+        <h3 class="location">Age: <%= data.demographics.age %></h3>
+      <% } %>
+    <% } %>
+
+    <% if(data.photos){ %>
+      <% data.photos.forEach(function(photo){ %>
+        <img src=<%= photo.url %>>
+      <% }) %>
+    <% } else { %>
+        <img src="https://rs304.pbsrc.com/albums/nn180/4chanRus/Awesome%20Face/1213841779552.png~c200">
+    <% } %>
+
+    <% if(data.socialProfiles){ %>
+      <ul>
+        <% data.socialProfiles.forEach(function(profile){ %>
+          <li><%= profile.type %>: <a href=<%=profile.url%> target="_blank"><%= profile.username %></a></li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+    <form action="/lookup" method="GET">
+      <input type="submit" value="New Search!">
+    </form>
+  </div>
+</div>

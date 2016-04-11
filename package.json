@@ -1,0 +1,21 @@
+{
+  "name": "authpractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "aws-sdk": "^2.3.1",
+    "client-sessions": "^0.7.0",
+    "dynamodb-doc": "^1.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "fullcontact": "^1.0.0",
+    "bcryptjs": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
