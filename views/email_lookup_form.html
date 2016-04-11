@@ -1,15 +1,14 @@
-<div class="container">
-  <div class="row col-xs-12">
-    <h1>You made it to Stalker App!</h1>
-    <form action="/lookup" method="POST">
-      
-      <label for="lookup">Lookup Email</label>
-      <input type="text" name="lookup[email]" required>
+<div class="form_wrapper">
+  <h1>Welcome to FriendFinder App!</h1>
+  <form action="/lookup" method="POST">
+    
+    <label for="lookup">Lookup Email</label>
+    <input type="text" name="lookup[email]" required>
 
-      <input type="submit" value="Lookup Email">
-    </form>
-    <form action="/logout" method="POST">
-      <input type="submit" value="Logout!">
-    </form>
-  </div>
+    <input type="submit" value="Lookup Email">
+  </form>
+  <form action="/logout" method="POST">
+    <input type="submit" value="Logout!">
+  </form>
 </div>
+

@@ -1,0 +1,45 @@
+.form_wrapper {
+  text-align: center;
+}
+
+.form h2 {
+  text-align: center;
+}
+
+.form {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px 50px 15px 50px;
+}
+
+.form form {
+  width: 200px;
+}
+
+.form label{
+  display: block;
+  text-align: left;
+}
+
+.form_input {
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#results_percentage {
+  background-color: pink;
+}
+
+
+
+
+
+
+
+
+

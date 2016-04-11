@@ -1,19 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Login!</h3>
-      <form action="/login" method="POST">
-        <label for="username">Username</label>
-        <input type="text" name="user[username]" required="true">
-        <br>
-        <br>
-        <label for="password">Password</label>
-        <input type="password" name="user[password]" required="true">
-        <br>
-        <br> 
-        <input type="submit" value="Login!">
-      </form>
-      <a href="/">Create Account</a>
-    </div>
+<div class="form_wrapper">
+  <div class="form">
+    <h2>Login!</h2>
+    <form action="/login" method="POST">
+      <label for="username">Username:</label>
+      <input class="form_input" type="text" name="user[username]" required="true">
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input class="form_input" type="password" name="user[password]" required="true">
+      <br>
+      <br> 
+      <input class="form_left" type="submit" value="Login!">
+    </form>
+    <a class="form_left"href="/">Create Account</a>
   </div>
 </div>
+

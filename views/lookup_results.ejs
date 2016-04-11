@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="row">
+<div class="">
+  <div class="">
     <% if(data.likelihood) { %>
       <% var percentage = data.likelihood; %>
-      <h1>Results: <%= percentage*100 %>% Estimated Accuracy </h1>
+      <h1 id="results_percentage">Results: <%= percentage*100 %>% Estimated Accuracy </h1>
     <% } %>
 
     <% if(data.contactInfo){ %>

@@ -19,6 +19,7 @@ app.use(sessions({
   activeDuration: 1000 * 60 * 5 // if expiresIn < activeDuration, the session will be extended by activeDuration milliseconds
 }));
 
+app.use(express.static(__dirname + '/styles'));
 app.set("view engine", "ejs");
 
 function requireAuth(request, response, next) {
