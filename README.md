@@ -1,5 +1,5 @@
 
-## ## TheFriendFinder App - Learning Node, Express, and Dynamodb
+## TheFriendFinder App - Learning Node, Express, and Dynamodb
 
 ## Use case
 - Users must create an account to use the app
