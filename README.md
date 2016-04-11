@@ -1,9 +1,8 @@
-## TheFriendFinder
 
-## Learning Node, Express, and Dynamodb
+## ## TheFriendFinder App - Learning Node, Express, and Dynamodb
 
 ## Use case
-- Users must create an account to use the
+- Users must create an account to use the app
 - Once logged in users can input an email to search FullContact API
 - Results from the query are returned to the user
 
